@@ -29,6 +29,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ["discord-bot-logger-backend.onrender.com"]
 #ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost").split(",")
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Application definition
@@ -46,6 +47,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
