@@ -8,7 +8,7 @@ def health_check(request):
 
     # Ping the Discord bot
     try:
-        discord_url = 'https://my-discord-bot.onrender.com/uptime-alert/'
+        discord_url = 'https://discord-logger-bot-r6u0.onrender.com'
         payload = {'status': 'ok', 'from': 'django'}
         requests.post(discord_url, json=payload, timeout=3)
     except Exception as e:
