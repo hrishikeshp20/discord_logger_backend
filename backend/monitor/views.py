@@ -1,6 +1,8 @@
 from django.http import JsonResponse
 from .models import PingLog
 import requests
+from django.views.decorators.csrf import csrf_exempt
+from django.views.decorators.http import require_POST
 
 def health_check(request):
     # Log the ping from UptimeRobot
