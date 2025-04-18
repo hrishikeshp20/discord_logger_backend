@@ -30,7 +30,7 @@ CSRF_TRUSTED_ORIGINS = [
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["discord-bot-logger-backend.onrender.com"]
 #ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "localhost").split(",")
@@ -118,7 +118,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+#TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Kolkata'
+
 
 USE_I18N = True
 
