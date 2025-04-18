@@ -16,7 +16,10 @@ def health_check(request):
 
     return JsonResponse({'status': 'ok'})
 
+@require_POST
+@csrf_exempt
 def discord_health_check(request):
     # Log the ping from the Discord bot
+    print("📥 Received ping from Discord bot")  # For debugging
     PingLog.objects.create(source='discord_bot', message='Ping back from Discord bot')
     return JsonResponse({'status': 'ok'})
