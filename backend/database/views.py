@@ -66,7 +66,7 @@ def sync_discord_user(request):
         else:
             return Response({"message": "Event ignored — not part of tracked cases."})
 
-    # Always update name if we're saving
+    # Always update name if saving
     user.user_name = user_name
     user.save()
     return Response(DiscordUserSerializer(user).data)
